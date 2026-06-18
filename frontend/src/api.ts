@@ -1,7 +1,9 @@
 import type { Restaurant, Table, MenuItem, ReviewsResponse, CombinableGroup, ReservationDetail, Landmark, ManagerRestaurantData } from "./types";
 
+const BASE = import.meta.env.VITE_API_BASE_URL ?? "";
+
 async function fetchJSON<T>(path: string, init?: RequestInit): Promise<T> {
-  const res = await fetch(`/api${path}`, {
+  const res = await fetch(`${BASE}/api${path}`, {
     headers: { "Content-Type": "application/json" },
     ...init,
   });
