@@ -1,4 +1,4 @@
-# FindMyFood
+# FindMyFood🍔
 
 A two-sided marketplace for booking restaurant tables. Diners see a live SVG floor plan and tap a specific table to book — not generic time-slot booking. Managers get a real-time dashboard for walk-ins, seating, and no-shows. Built as a portfolio/hackathon prototype.
 
