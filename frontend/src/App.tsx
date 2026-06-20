@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
+import LandingPage from "./pages/LandingPage";
 import BrowsePage from "./pages/BrowsePage";
 import RestaurantDetailPage from "./pages/RestaurantDetailPage";
 import FloorPlanPage from "./pages/FloorPlanPage";
@@ -13,8 +14,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route element={<Layout />}>
-          <Route path="/" element={<BrowsePage />} />
+          <Route path="/browse" element={<BrowsePage />} />
           <Route path="/restaurant/:id" element={<RestaurantDetailPage />} />
           <Route path="/restaurant/:id/tables" element={<FloorPlanPage />} />
           <Route path="/confirmation/:lookupCode" element={<ConfirmationPage />} />
